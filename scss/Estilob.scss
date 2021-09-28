@@ -1,0 +1,649 @@
+@import "Variables";
+
+/*--------------------------INDEX.HTML-------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+header{
+    position: sticky;
+    top: 0%;
+    width: 100vw;
+    height: auto;
+    z-index: 10
+    }
+nav{
+    font-size: 120%;
+    font-family:'Roboto Condensed', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-style:normal;
+    background-color: white;
+    }
+
+.collapse.navbar-collapse{
+        justify-content: space-evenly;
+        }
+    
+.imgLogo{
+        height: $logoAlto;
+        width: $logoAncho;
+    }
+
+main{
+        height: $altoMain;
+        width: $anchoMain;
+        background-color: $bgColorMain;
+    }
+
+.mainGrid:before {
+        content: "";
+        position: absolute;
+        background-color: #000;
+        opacity: 0.4;
+        top:0;
+        bottom: 0;
+        left:0;
+        right:0;
+        }
+    
+    .mainGrid{
+        background-image: url(../Imagenes/fondoRioDeJaneiro.jpg);
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1.5fr 1.5fr;
+        grid-template-areas: "titulo titulo ."
+                             "viaja . ."
+                             "carousel carousel carousel"
+                             "carousel carousel carousel";
+        justify-items: center;
+        align-items: center;
+        row-gap: 5px;
+        column-gap: 5px;
+        padding: 10px;
+        }
+
+.btn.btn-primary{
+            background-color: rgba(109, 55, 160, 0.678);
+            }
+
+.textoCarousel{
+                font-family: $fuenteParrafo;
+                font-weight: 700;
+                color: black;
+                background-color: rgba(238, 238, 238, 0.4);
+            }
+
+.estiloGeneral{
+                font-family: 'Open Sans', sans-serif;
+                color: black;
+                font-size: 50px;
+                padding: 1rem;
+            }
+h1 h2 h3 h4 p{
+    @extend .estiloGeneral;
+}
+
+.tituloPrincipalIndex{
+                @extend .estiloGeneral;
+                text-align: center;
+                font-size: 180%;
+                word-spacing: 10px;
+                color: $colorTituloM;
+                grid-area: titulo;
+                position: relative;
+                }
+#viaja{          
+                @extend .estiloGeneral;
+                grid-area: viaja;
+                position: relative;
+                color: $colorTituloM;
+
+                
+                }
+    
+
+
+#carouselExampleCaptions{
+                    grid-area: carousel;
+                    height: 400px;
+                    width: 700px;
+                }
+#imgCarousel{
+                    height: 400px;
+                    width: 700px;
+                }
+.logoChat{
+                        height: 100px;
+                        width: 100px;
+                        position: fixed;
+                        bottom: 0%;
+                        right: 0%;
+                    }
+
+.footer{
+                        display: flex;
+                        height: 80px;
+                        width: 100vw;
+                        justify-content: space-between;  
+        &--white{
+                    background-color: white;
+                }
+        &--gradient{
+                    background-image: linear-gradient(rgb(161, 151, 250) , rgb(184, 177, 248) , rgb(202, 192, 245));   
+                }
+                
+        &__iconos{
+                        display: flex;
+                        list-style: none;
+                        justify-content: space-evenly;
+                        font-size: 30px;
+                        width: 20%;
+                        margin-right: 1.5rem;
+                        padding-top: 1rem;
+                    }
+        &__texto{
+                        padding: 10px;
+                        font-size: 100%;
+                        font-weight: bold;
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+                }
+                
+/*----------------------------------------DESTINOS------------------------------------------------------*/
+.tituloDestinos{
+    @extend .estiloGeneral;
+    
+}
+
+@mixin textoDivDestinos ($tamanioTexto , $bgColor , $marginTop, $fuente, $color, $alineacion) {
+                         font-size: $tamanioTexto;
+                         background-color: $bgColor;
+                         margin-top: $marginTop;
+                         font-family: $fuente;
+                         color: $color;
+                         text-align: $alineacion;
+}
+.contenidoDestinos{
+    @include textoDivDestinos(120%,rgba(255, 255, 255, 0.4), 100px,'Open Sans', black, center)
+}
+
+@mixin formatoDivDestinos ($ancho , $alto , $bgRepeat , $bgSize , $jSelf , $aSelf) {
+    width: $ancho;
+    height: $alto;
+    background-repeat: $bgRepeat;
+    background-size: $bgSize;
+    justify-self: $jSelf;
+    align-self: $aSelf;
+    
+}
+#divDestinoBrasil{
+    color: rgb(9, 44, 112);
+    font-family: 'Roboto Condensed', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "rioDeJaneiro buzios florianopolis balnearioCamboriu salvadorDeBahia praiaDoForte"
+                         "maceio maragogi portoDeGalinhas fortaleza aquiraz jericoacoara";
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    }
+#rio{
+    @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/rioDeJaneiro.jpg);
+        grid-area: rioDeJaneiro;
+     }
+
+#buzios{
+    @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/buzios.jpg);
+        grid-area: buzios;
+    }
+    
+    #florianopolis{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/florianopolis.jpg);
+        grid-area: florianopolis;
+    }
+    #camboriu{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/camboriu.jpg);
+        grid-area: balnearioCamboriu;
+    }
+    #salvadorDeBahia{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/salvadorDeBahia.jpg);
+        grid-area: salvadorDeBahia;
+
+    }
+    #praiaDoForte{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/praiaDoForte.jpg);
+        grid-area: praiaDoForte;
+        }
+
+    #maceio{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/maceio.jpg);
+        grid-area: maceio;
+        }
+
+    #maragogi{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/maragogi.jpg);
+        grid-area: maragogi;
+        }
+    #portoDeGalinhas{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/portoDeGalinhas.jpg);
+        grid-area: portoDeGalinhas;
+        }
+    #fortaleza{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/fortaleza.jpg);
+        grid-area: fortaleza;
+        }
+    #aquiraz{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/aquiraz.jpg);
+        grid-area: aquiraz;
+        }
+    #jericoacoara{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoBrasil/jericoacoara.jpg);
+        grid-area: jericoacoara;
+        }
+    
+    
+    #divDestinoPeru{
+        color: rgb(9, 44, 112);
+        font-family: 'Roboto Condensed', sans-serif;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "limaCiudadImperial organosPuntaSal cuscoCiudadImperial aguasCalientesMachu iquitosSelva arequipa";        
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        align-items: center;
+        justify-content: center;                         
+    }
+    
+    #lima{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoPeru/limaPeru.jpg);
+        grid-area: limaCiudadImperial;
+        }
+    
+    #organos{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoPeru/organos.jpg);
+        grid-area: organosPuntaSal;
+        }
+    
+    #cusco{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoPeru/cusco.jpg);
+        grid-area: cuscoCiudadImperial;
+        }
+    #aguasCalientes{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoPeru/aguasCalientes.jpg);
+        grid-area: aguasCalientesMachu;
+        }
+    #iquitos{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoPeru/iquitos.jpg);
+        grid-area: iquitosSelva;
+        }
+    
+    #arequipa{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoPeru/arequipa.jpg);
+        grid-area: arequipa;
+        }
+
+    #divDestinoMexico{
+        color: rgb(9, 44, 112);
+        font-family: 'Roboto Condensed', sans-serif;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "cancun playaDelCarmen merida mexicoDf maravillasDelNorte bajaCalifornia"; 
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        align-items: center;
+        justify-content: center;     
+    }
+    
+    #cancun{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoMexico/cancun.jpg);
+        grid-area: cancun;
+        }
+
+    #playaDelCarmen{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoMexico/PlayadelCarmen.jpg);
+        grid-area: playaDelCarmen;
+        }
+
+    #merida{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoMexico/merida.jpg);
+        grid-area: merida;
+        }
+
+    #mexicoDf{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoMexico/mexicoDf.jpg);
+        grid-area: mexicoDf;
+        }
+
+    #maravillasDelNorte{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoMexico/maravillasDelNorte.jpg);
+        grid-area: maravillasDelNorte;
+        }
+
+    #bajaCalifornia{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoMexico/bajaCalifornia.jpg);
+        grid-area: bajaCalifornia;
+        }
+        
+    #divDestinoEstadosUnidos{
+        color: rgb(9, 44, 112);
+        font-family: 'Roboto Condensed', sans-serif;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "sanFrancisco newYork miami lasVegas boston orlando";  
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        align-items: center;
+        justify-content: center;    
+        padding-bottom: 20px;                    
+    }
+    
+    #sanFrancisco{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoEstadosUnidos/sanFrancisco.jpg);
+        grid-area: sanFrancisco;
+        }
+
+    #newYork{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoEstadosUnidos/nuevaYork.jpg);
+        grid-area: newYork;
+        }
+    
+    #miami{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoEstadosUnidos/miami.jpg);
+        grid-area: miami;
+        }
+
+    #boston{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoEstadosUnidos/boston.jpg);
+        grid-area: boston;
+        }
+
+    #lasVegas{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoEstadosUnidos/lasVegas.jpg);
+        grid-area: lasVegas;
+        }
+
+    #orlando{
+        @include formatoDivDestinos(180px, 160px, no-repeat, cover, center, center);
+        background-image: url(../Imagenes/DestinoEstadosUnidos/orlando.jpg);
+        grid-area: orlando;
+        }
+/*-----------------------------TARIFARIO ONLINE.HTML-------------------------------------*/
+.mainTarifario{
+    padding: 1rem;
+}
+
+.tarifario{
+    display: flex;
+    margin: 10px 0px;
+    justify-content: space-between;
+    
+    &__titulo{
+        color: black;
+        margin: 0;
+        font-size: 130%;
+        font-family: $fuenteTitulo;
+        padding: 1rem 1rem 1rem 0rem;
+    }
+    &__elementos{
+        display: flex;
+        justify-content: space-between;
+        font-size: 100%;
+        font-family: $fuenteTitulo;
+        margin: 0;
+        padding: 0;
+    }
+    &__iconos{
+        align-items: flex-end;
+        padding: 0.8rem;
+        list-style: none;
+        font-size: 100%;
+    }
+    &__descripcion{
+        align-items: flex-end;
+        padding: 0.8rem;
+        font-size: 80px;
+        font-family: $fuenteTitulo;
+        list-style: none;
+        font-size: 100%;
+    }
+}
+.condiciones{
+
+    margin: 1rem 0rem 1rem 0rem;
+
+    &__titulo{
+    margin-top: 0;
+    font-family: $fuenteTitulo;
+    }
+    &__lista{
+    margin: 0;
+    padding-left: 1rem;
+    }
+    &__items{
+        font-style: italic;
+        font-family: $fuenteParrafo;
+
+    }
+}
+
+/*-----------------------------------------EMPRESA---------------------------------------------------------------------*/
+.titulosEmpresa{
+    padding: 10px;
+    }
+
+#gridEmpresa{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: "historia historia mapa"
+                         "mision mision mapa"    ;
+    grid-gap: 10px;
+}
+#areaHistoria{
+    grid-area: historia;
+    padding: 10px;
+}
+#areaMision{
+    grid-area: mision;
+    padding: 10px;
+}
+#areaMapa{
+    grid-area: mapa;
+    padding: 10px;
+}
+#divEquipoDeTrabajo{
+    display: flex;
+    width: 100vw;
+}
+#divCards{
+    width: 25%;
+}
+
+.btn-primary{
+background-color: rgb(186, 179, 248);
+border-color: rgb(186, 179, 248);
+}
+
+#divPartners{
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly
+}
+.imgPartners{
+    width: 160px;
+    height: 90px;
+    padding: 10px;
+}
+
+/*------------------------------CONTACTO---------------------------------------*/
+#tituloContacto{
+    font-family: $fuenteTitulo;
+    font-size: 180%;
+    padding: 1rem;
+    margin-bottom: 0px;
+}
+
+.formulario{
+    padding: 20px;
+    &__titulo{
+        font-family: $fuenteParrafo;
+        font-size: 120%;
+        margin: 5px 0px 5px 0px;
+        
+
+    }
+    &__subtitulos{
+        font-family: $fuenteParrafo;
+        font-size: 80%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        
+
+    }
+    &__campos{
+        font-family: $fuenteParrafo;
+        margin: 5px 0px 5px 0px;
+        width: 30%;
+
+    }
+
+
+}
+
+
+/*---------------------------TABLET-------------------------------------------------------------------*/
+@media only screen and (max-width: 975px){
+    nav{
+        color: black;
+        font-size: 80%;
+        font-family:'Roboto Condensed', sans-serif;
+        text-align: right;
+        font-weight: 400;
+        font-style:normal
+            }
+            
+
+#viaja{
+            font-size: 160%;
+            }
+.tituloPrincipalIndex{
+                font-family:'Roboto Condensed', sans-serif;
+                text-align: center;
+                font-size: 160%;
+                word-spacing: 7px;
+                grid-area: titulo;
+                }
+
+.mainGrid{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-areas: "titulo"
+                                     "."
+                                     "viaja"
+                                     "carousel"
+                                     "carousel";
+                row-gap: 5px;
+                column-gap: 5px;
+                }
+#carouselExampleCaptions{
+                    grid-area: carousel;
+                    height: 300px;
+                    width: 90vw;
+                }
+#imgCarousel{
+                    height: 300px;
+                    width: 90vw;
+                }
+        
+.footer__iconos {
+    font-size: 20px;
+}
+.footer__texto {
+    font-size: 80%;
+}
+
+}
+/*--------------------------SMARTPHONE----------------------------------*/
+@media only screen and (max-width: 396px){
+        
+
+.mainGrid{
+                
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-areas: "titulo"
+                                     "acceso"
+                                     "."
+                                     "viaja"
+                                     "carousel"
+                                     "carousel"
+                                     "."
+                                     ".";
+                justify-items: center;
+                align-items: center;
+                row-gap: 5px;
+                column-gap: 5px;
+                }
+
+#carouselExampleCaptions{
+                    grid-area: carousel;
+                    height: 200px;
+                    width: 90vw;
+                }
+#imgCarousel{
+                    height: 200px;
+                    width: 90vw;
+                }
+
+.footer__iconos {
+                  font-size: 20px;
+                }
+.footer__texto {
+                   font-size: 60%;
+            }
+
+}

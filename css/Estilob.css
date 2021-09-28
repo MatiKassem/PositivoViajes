@@ -1,0 +1,679 @@
+/*Estilo NAV*/
+/*Estilo MAIN*/
+/*Estilo Logo*/
+/*Estilo de Titulos Main*/
+/*Estilo de Titulos General*/
+/*Estilo de Parrafos*/
+/*--------------------------INDEX.HTML-------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif; }
+
+header {
+  position: sticky;
+  top: 0%;
+  width: 100vw;
+  height: auto;
+  z-index: 10; }
+
+nav {
+  font-size: 120%;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-style: normal;
+  background-color: white; }
+
+.collapse.navbar-collapse {
+  justify-content: space-evenly; }
+
+.imgLogo {
+  height: 60%;
+  width: 60%; }
+
+main {
+  height: auto;
+  width: 100vw;
+  background-color: rgba(232, 237, 248, 0.8); }
+
+.mainGrid:before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  opacity: 0.4;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.mainGrid {
+  background-image: url(../Imagenes/Fondos/fondoRioDeJaneiro.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1.5fr 1.5fr;
+  grid-template-areas: "titulo titulo ."
+ "viaja . ."
+ "carousel carousel carousel"
+ "carousel carousel carousel";
+  justify-items: center;
+  align-items: center;
+  row-gap: 5px;
+  column-gap: 5px;
+  padding: 10px; }
+
+.btn.btn-primary {
+  background-color: rgba(109, 55, 160, 0.678); }
+
+.textoCarousel {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: black;
+  background-color: rgba(238, 238, 238, 0.4); }
+
+.estiloGeneral, h1 h2 h3 h4 p, .tituloPrincipalIndex, #viaja, .tituloDestinos {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 50px;
+  padding: 1rem; }
+
+.tituloPrincipalIndex {
+  text-align: center;
+  font-size: 180%;
+  word-spacing: 10px;
+  color: white;
+  grid-area: titulo;
+  position: relative; }
+
+#viaja {
+  grid-area: viaja;
+  position: relative;
+  color: white; }
+
+#carouselExampleCaptions {
+  grid-area: carousel;
+  height: 400px;
+  width: 700px; }
+
+#imgCarousel {
+  height: 400px;
+  width: 700px; }
+
+.logoChat {
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  bottom: 0%;
+  right: 0%; }
+
+.footer {
+  display: flex;
+  height: 80px;
+  width: 100vw;
+  justify-content: space-between; }
+  .footer--white {
+    background-color: white; }
+  .footer--gradient {
+    background-image: linear-gradient(#a197fa, #b8b1f8, #cac0f5); }
+  .footer__iconos {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    font-size: 30px;
+    width: 20%;
+    margin-right: 1.5rem;
+    padding-top: 1rem; }
+  .footer__texto {
+    padding: 10px;
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px; }
+
+/*----------------------------------------DESTINOS------------------------------------------------------*/
+.contenidoDestinos {
+  font-size: 120%;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 100px;
+  font-family: "Open Sans";
+  color: black;
+  text-align: center; }
+
+#divDestinoBrasil {
+  color: #092c70;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "rioDeJaneiro buzios florianopolis balnearioCamboriu salvadorDeBahia praiaDoForte"
+ "maceio maragogi portoDeGalinhas fortaleza aquiraz jericoacoara";
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  align-items: center;
+  justify-content: center; }
+
+#rio {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/rioDeJaneiro.jpg);
+  grid-area: rioDeJaneiro; }
+
+#buzios {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/buzios.jpg);
+  grid-area: buzios; }
+
+#florianopolis {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/florianopolis.jpg);
+  grid-area: florianopolis; }
+
+#camboriu {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/camboriu.jpg);
+  grid-area: balnearioCamboriu; }
+
+#salvadorDeBahia {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/salvadorDeBahia.jpg);
+  grid-area: salvadorDeBahia; }
+
+#praiaDoForte {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/praiaDoForte.jpg);
+  grid-area: praiaDoForte; }
+
+#maceio {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/maceio.jpg);
+  grid-area: maceio; }
+
+#maragogi {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/maragogi.jpg);
+  grid-area: maragogi; }
+
+#portoDeGalinhas {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/portoDeGalinhas.jpg);
+  grid-area: portoDeGalinhas; }
+
+#fortaleza {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/fortaleza.jpg);
+  grid-area: fortaleza; }
+
+#aquiraz {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/aquiraz.jpg);
+  grid-area: aquiraz; }
+
+#jericoacoara {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoBrasil/jericoacoara.jpg);
+  grid-area: jericoacoara; }
+
+#divDestinoPeru {
+  color: #092c70;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "limaCiudadImperial organosPuntaSal cuscoCiudadImperial aguasCalientesMachu iquitosSelva arequipa";
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  align-items: center;
+  justify-content: center; }
+
+#lima {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoPeru/limaPeru.jpg);
+  grid-area: limaCiudadImperial; }
+
+#organos {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoPeru/organos.jpg);
+  grid-area: organosPuntaSal; }
+
+#cusco {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoPeru/cusco.jpg);
+  grid-area: cuscoCiudadImperial; }
+
+#aguasCalientes {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoPeru/aguasCalientes.jpg);
+  grid-area: aguasCalientesMachu; }
+
+#iquitos {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoPeru/iquitos.jpg);
+  grid-area: iquitosSelva; }
+
+#arequipa {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoPeru/arequipa.jpg);
+  grid-area: arequipa; }
+
+#divDestinoMexico {
+  color: #092c70;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "cancun playaDelCarmen merida mexicoDf maravillasDelNorte bajaCalifornia";
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  align-items: center;
+  justify-content: center; }
+
+#cancun {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoMexico/cancun.jpg);
+  grid-area: cancun; }
+
+#playaDelCarmen {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoMexico/PlayadelCarmen.jpg);
+  grid-area: playaDelCarmen; }
+
+#merida {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoMexico/merida.jpg);
+  grid-area: merida; }
+
+#mexicoDf {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoMexico/mexicoDf.jpg);
+  grid-area: mexicoDf; }
+
+#maravillasDelNorte {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoMexico/maravillasDelNorte.jpg);
+  grid-area: maravillasDelNorte; }
+
+#bajaCalifornia {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoMexico/bajaCalifornia.jpg);
+  grid-area: bajaCalifornia; }
+
+#divDestinoEstadosUnidos {
+  color: #092c70;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "sanFrancisco newYork miami lasVegas boston orlando";
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px; }
+
+#sanFrancisco {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoEstadosUnidos/sanFrancisco.jpg);
+  grid-area: sanFrancisco; }
+
+#newYork {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoEstadosUnidos/nuevaYork.jpg);
+  grid-area: newYork; }
+
+#miami {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoEstadosUnidos/miami.jpg);
+  grid-area: miami; }
+
+#boston {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoEstadosUnidos/boston.jpg);
+  grid-area: boston; }
+
+#lasVegas {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoEstadosUnidos/lasVegas.jpg);
+  grid-area: lasVegas; }
+
+#orlando {
+  width: 180px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+  background-image: url(../Imagenes/DestinoEstadosUnidos/orlando.jpg);
+  grid-area: orlando; }
+
+/*-----------------------------TARIFARIO ONLINE.HTML-------------------------------------*/
+.mainTarifario {
+  padding: 1rem; }
+
+.tarifario {
+  display: flex;
+  margin: 10px 0px;
+  justify-content: space-between; }
+  .tarifario__titulo {
+    color: black;
+    margin: 0;
+    font-size: 130%;
+    font-family: "Open Sans", sans-serif;
+    padding: 1rem 1rem 1rem 0rem; }
+  .tarifario__elementos {
+    display: flex;
+    justify-content: space-between;
+    font-size: 100%;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0; }
+  .tarifario__iconos {
+    align-items: flex-end;
+    padding: 0.8rem;
+    list-style: none;
+    font-size: 100%; }
+  .tarifario__descripcion {
+    align-items: flex-end;
+    padding: 0.8rem;
+    font-size: 80px;
+    font-family: "Open Sans", sans-serif;
+    list-style: none;
+    font-size: 100%; }
+
+.condiciones {
+  margin: 1rem 0rem 1rem 0rem; }
+  .condiciones__titulo {
+    margin-top: 0;
+    font-family: "Open Sans", sans-serif; }
+  .condiciones__lista {
+    margin: 0;
+    padding-left: 1rem; }
+  .condiciones__items {
+    font-style: italic;
+    font-family: "Roboto", sans-serif; }
+
+/*-----------------------------------------EMPRESA---------------------------------------------------------------------*/
+.titulosEmpresa {
+  padding: 10px; }
+
+#gridEmpresa {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-areas: "historia historia mapa"
+ "mision mision mapa";
+  grid-gap: 10px; }
+
+#areaHistoria {
+  grid-area: historia;
+  padding: 10px; }
+
+#areaMision {
+  grid-area: mision;
+  padding: 10px; }
+
+#areaMapa {
+  grid-area: mapa;
+  padding: 10px; }
+
+#divEquipoDeTrabajo {
+  display: flex;
+  width: 100vw; }
+
+#divCards {
+  width: 25%; }
+
+.btn-primary {
+  background-color: #bab3f8;
+  border-color: #bab3f8; }
+
+#divPartners {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly; }
+
+.imgPartners {
+  width: 160px;
+  height: 90px;
+  padding: 10px; }
+
+/*------------------------------CONTACTO---------------------------------------*/
+#tituloContacto {
+  font-family: "Open Sans", sans-serif;
+  font-size: 180%;
+  padding: 1rem;
+  margin-bottom: 0px; }
+
+.formulario {
+  padding: 20px; }
+  .formulario__titulo {
+    font-family: "Roboto", sans-serif;
+    font-size: 120%;
+    margin: 5px 0px 5px 0px; }
+  .formulario__subtitulos {
+    font-family: "Roboto", sans-serif;
+    font-size: 80%;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+  .formulario__campos {
+    font-family: "Roboto", sans-serif;
+    margin: 5px 0px 5px 0px;
+    width: 30%; }
+
+/*---------------------------TABLET-------------------------------------------------------------------*/
+@media only screen and (max-width: 975px) {
+  nav {
+    color: black;
+    font-size: 80%;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: right;
+    font-weight: 400;
+    font-style: normal; }
+  #viaja {
+    font-size: 160%; }
+  .tituloPrincipalIndex {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    font-size: 160%;
+    word-spacing: 7px;
+    grid-area: titulo; }
+  .mainGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "titulo"
+ "."
+ "viaja"
+ "carousel"
+ "carousel";
+    row-gap: 5px;
+    column-gap: 5px; }
+  #carouselExampleCaptions {
+    grid-area: carousel;
+    height: 300px;
+    width: 90vw; }
+  #imgCarousel {
+    height: 300px;
+    width: 90vw; }
+  .footer__iconos {
+    font-size: 20px; }
+  .footer__texto {
+    font-size: 80%; } }
+
+/*--------------------------SMARTPHONE----------------------------------*/
+@media only screen and (max-width: 396px) {
+  .mainGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "titulo"
+ "acceso"
+ "."
+ "viaja"
+ "carousel"
+ "carousel"
+ "."
+ ".";
+    justify-items: center;
+    align-items: center;
+    row-gap: 5px;
+    column-gap: 5px; }
+  #carouselExampleCaptions {
+    grid-area: carousel;
+    height: 200px;
+    width: 90vw; }
+  #imgCarousel {
+    height: 200px;
+    width: 90vw; }
+  .footer__iconos {
+    font-size: 20px; }
+  .footer__texto {
+    font-size: 60%; } }
