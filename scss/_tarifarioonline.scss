@@ -1,0 +1,58 @@
+/*-----------------------------TARIFARIO ONLINE.HTML-------------------------------------*/
+.mainTarifario{
+    padding: 1rem;
+}
+
+.tarifario{
+    display: flex;
+    margin: 10px 0px;
+    justify-content: space-between;
+    
+    &__titulo{
+        color: black;
+        margin: 0;
+        font-size: 130%;
+        font-family: $fuenteTitulo;
+        padding: 1rem 1rem 1rem 0rem;
+    }
+    &__elementos{
+        display: flex;
+        justify-content: space-between;
+        font-size: 100%;
+        font-family: $fuenteTitulo;
+        margin: 0;
+        padding: 0;
+    }
+    &__iconos{
+        align-items: flex-end;
+        padding: 0.8rem;
+        list-style: none;
+        font-size: 100%;
+    }
+    &__descripcion{
+        align-items: flex-end;
+        padding: 0.8rem;
+        font-size: 80px;
+        font-family: $fuenteTitulo;
+        list-style: none;
+        font-size: 100%;
+    }
+}
+.condiciones{
+
+    margin: 1rem 0rem 1rem 0rem;
+
+    &__titulo{
+    margin-top: 0;
+    font-family: $fuenteTitulo;
+    }
+    &__lista{
+    margin: 0;
+    padding-left: 1rem;
+    }
+    &__items{
+        font-style: italic;
+        font-family: $fuenteParrafo;
+
+    }
+}

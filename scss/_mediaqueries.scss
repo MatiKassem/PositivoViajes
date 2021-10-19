@@ -1,0 +1,417 @@
+
+
+/*---------------------------TABLET-------------------------------------------------------------------*/
+@media only screen and (max-width: 975px){
+/*---------------------FOOTER TABLET--------------------*/
+    .footer{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: auto;
+        &__iconos{
+                   height: 20px;
+                   width: 20px;
+                   margin-left: 10px;
+                   margin-right: 10px;
+                  }
+        &__texto{
+                 padding:0px;
+                 font-size: 70%;
+                 font-weight: 400;
+                 text-align: center;
+                 margin:0%;
+                 }
+    
+        }
+           
+/*-------------INDEX TABLET-------------------*/
+    
+    #viaja{
+                font-size: 160%;
+                }
+    .tituloPrincipalIndex{
+                    font-family:'Roboto Condensed', sans-serif;
+                    text-align: center;
+                    font-size: 160%;
+                    word-spacing: 7px;
+                    grid-area: titulo;
+                    }
+    
+    .mainGrid{
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                    grid-template-areas: "titulo"
+                                         "."
+                                         "viaja"
+                                         "carousel"
+                                         "carousel";
+                    row-gap: 5px;
+                    column-gap: 5px;
+                    }
+    #carouselExampleCaptions{
+                        grid-area: carousel;
+                        height: 300px;
+                        width: 90vw;
+                    }
+    #imgCarousel{
+                        height: 300px;
+                        width: 90vw;
+                    }
+    
+/*-------------DESTINOS TABLET-------------------*/
+    .tituloDestinos{
+        font-size: 150%;
+    }
+    #divDestinoBrasil{
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-rows: 1fr 1fr 1fr 1fr;
+                        grid-template-areas: "rioDeJaneiro buzios florianopolis"
+                                              "balnearioCamboriu salvadorDeBahia praiaDoForte"
+                                              "maceio maragogi portoDeGalinhas"
+                                              "fortaleza aquiraz jericoacoara";
+                        }
+    
+    #divDestinoPeru{
+                            grid-template-columns: 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 1fr;
+                            grid-template-areas: "limaCiudadImperial organosPuntaSal cuscoCiudadImperial"
+                                                 "aguasCalientesMachu iquitosSelva arequipa";        
+                        }
+    #divDestinoMexico{
+                            grid-template-columns: 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 1fr;
+                            grid-template-areas: "cancun playaDelCarmen merida"
+                                                  "mexicoDf maravillasDelNorte bajaCalifornia"; 
+                        }
+    #divDestinoEstadosUnidos{
+                            grid-template-columns: 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 1fr;
+                            grid-template-areas: "sanFrancisco newYork miami"
+                                                 "lasVegas boston orlando";  
+                        }
+/*-------------TARIFARIOS TABLET-------------------*/
+    .tarifario{
+                            display: inline-block;
+                            margin: 10px 0px;
+                            justify-content: space-between;
+                            
+                            &__titulo{
+                                color: black;
+                                margin: 0;
+                                font-size: 140%;
+                                padding: 1rem 1rem 1rem 0rem;
+                            }
+                            &__elementos{
+                                display: inline-block;
+                                justify-content: space-between;
+                                font-family: $fuenteTitulo;
+                                margin: 0;
+                                padding: 0;
+                            }
+                            &__iconos{
+                                display: none;
+                            }
+                            &__descripcion{
+                                align-items: flex-end;
+                                padding: 0;
+                                list-style: circle;
+                                margin-left: 10px;
+                                font-family: $fuenteTitulo;
+                                }
+                        }
+/*---------------------EMPRESA TABLET--------------------*/
+    
+    #gridEmpresa{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.3fr 0.6fr;
+        grid-template-areas: "mapa"
+                             "historia"
+                             "mision";
+        grid-gap: 10px;
+    }
+    #areaHistoria{
+        grid-area: historia;
+        padding: 10px;
+    }
+    #areaMision{
+        grid-area: mision;
+        padding: 10px;
+    }
+    #areaMapa{
+        grid-area: mapa;
+        padding: 10px;
+        text-align: center;
+        }
+    #mapa{
+        height: 450px;
+        width: 450px;
+        
+    }
+    
+    #divEquipoDeTrabajo{
+        display: grid;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "cardUno cardDos"
+                             "cardTres cardCuatro";
+    }
+    #cardUno{
+        grid-area: cardUno;
+        margin-left: 20px;
+    }
+    #cardDos{
+        grid-area: cardDos;
+        margin-left: 20px;
+    }
+    #cardTres{
+        grid-area: cardTres;
+        margin-left: 20px;
+    }
+    #cardCuatro{
+        grid-area: cardCuatro;
+        margin-left: 20px;
+    }
+    
+    #divPartners{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "partnerUno partnerDos partnerTres"
+                             "partnerCuatro partnerCinco partnerSeis";
+    }
+    #partnerUno{
+        grid-area: partnerUno;
+    }
+    #partnerDos{
+        grid-area: partnerDos;
+    }
+    #partnerTres{
+        grid-area: partnerTres;
+    }
+    #partnerCuatro{
+        grid-area: partnerCuatro;
+    }
+    #partnerCinco{
+        grid-area: partnerCinco;
+    }
+    #partnerSeis{
+        grid-area: partnerSeis;
+    }
+/*---------------------CONTACTO TABLET--------------------*/
+    }
+/*--------------------------SMARTPHONE----------------------------------*/
+    @media only screen and (max-width: 396px){
+/*---------------------FOOTER MOBILE--------------------*/
+    .footer{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: auto;
+        &__iconos{
+                   height: 20px;
+                   width: 20px;
+                   margin-left: 10px;
+                   margin-right: 10px;
+                  }
+        &__texto{
+                 padding:0px;
+                 font-size: 40%;
+                 font-weight: 400;
+                 text-align: center;
+                 margin:0%;
+                 }
+    
+        }
+    
+/*---------------------INDEX MOBILE--------------------*/
+    .mainGrid{
+                    
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                    grid-template-areas: "titulo"
+                                         "."
+                                         "viaja"
+                                         "carousel"
+                                         "carousel";
+                    }
+    
+    #carouselExampleCaptions{
+                        grid-area: carousel;
+                        height: 200px;
+                        width: 90vw;
+                    }
+    #imgCarousel{
+                        height: 200px;
+                        width: 90vw;
+                    }
+    
+    .logoChat{
+            height: 60px;
+            width: 60px;
+            position: fixed;
+            bottom: 10%;
+            right: 0%;
+        }
+/*---------------------DESTINOS MOBILE--------------------*/
+    .tituloDestinos{
+        font-size: 100%;
+    }
+    #divDestinoBrasil{
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                        grid-template-areas: "rioDeJaneiro buzios"
+                                              "florianopolis balnearioCamboriu"
+                                              "salvadorDeBahia praiaDoForte"
+                                             "maceio maragogi"
+                                             "portoDeGalinhas fortaleza"
+                                             "aquiraz jericoacoara";
+                        }
+    
+    #divDestinoPeru{
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr;
+                            grid-template-areas: "limaCiudadImperial organosPuntaSal"
+                                                  "cuscoCiudadImperial aguasCalientesMachu"
+                                                  "iquitosSelva arequipa";        
+                        }
+    #divDestinoMexico{
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr;
+                            grid-template-areas: "cancun playaDelCarmen"
+                                                 "merida mexicoDf"
+                                                  "maravillasDelNorte bajaCalifornia"; 
+                        }
+    #divDestinoEstadosUnidos{
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr;
+                            grid-template-areas: "sanFrancisco newYork"
+                                                 "miami lasVegas"
+                                                 "boston orlando";  
+                        }
+/*---------------------TARIFARIO MOBILE--------------------*/                    
+    .tarifario{
+                            display: inline-block;
+                            margin: 10px 0px;
+                            justify-content: space-between;
+                            
+                            &__titulo{
+                                color: black;
+                                margin: 0;
+                                font-size: 140%;
+                                padding: 1rem 1rem 1rem 0rem;
+                            }
+                            &__elementos{
+                                display: inline-block;
+                                justify-content: space-between;
+                                font-family: $fuenteTitulo;
+                                margin: 0;
+                                padding: 0;
+                            }
+                            &__iconos{
+                                display: none;
+                            }
+                            &__descripcion{
+                                align-items: flex-end;
+                                padding: 0;
+                                list-style: circle;
+                                margin-left: 10px;
+                                font-family: $fuenteTitulo;
+                                }
+                        }
+    h4{
+        font-size: 100%;
+    }
+/*---------------------EMPRESA MOBILE--------------------*/
+    
+    #gridEmpresa{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr 0.5fr 1fr;
+        grid-template-areas: "mapa"
+                             "historia"
+                             "mision";
+        grid-gap: 10px;
+    }
+    #areaHistoria{
+        grid-area: historia;
+        padding: 10px;
+    }
+    #areaMision{
+        grid-area: mision;
+        padding: 10px;
+    }
+    #areaMapa{
+        grid-area: mapa;
+        padding: 10px;
+        text-align: center;
+        }
+    #mapa{
+        height: 320px;
+        width: 320px;
+    }
+    
+    #divEquipoDeTrabajo{
+        display: grid;
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "cardUno"
+                             "cardDos"
+                             "cardTres"
+                             "cardCuatro";
+    }
+    #cardUno{
+        grid-area: cardUno;
+        margin-left: 20px;
+    }
+    #cardDos{
+        grid-area: cardDos;
+        margin-left: 20px;
+    }
+    #cardTres{
+        grid-area: cardTres;
+        margin-left: 20px;
+    }
+    #cardCuatro{
+        grid-area: cardCuatro;
+        margin-left: 20px;
+    }
+    
+    #divPartners{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "partnerUno partnerDos"
+                             "partnerTres partnerCuatro"
+                             "partnerCinco partnerSeis";
+    }
+    #partnerUno{
+        grid-area: partnerUno;
+    }
+    #partnerDos{
+        grid-area: partnerDos;
+    }
+    #partnerTres{
+        grid-area: partnerTres;
+    }
+    #partnerCuatro{
+        grid-area: partnerCuatro;
+    }
+    #partnerCinco{
+        grid-area: partnerCinco;
+    }
+    #partnerSeis{
+        grid-area: partnerSeis;
+    }
+    
+/*---------------------CONTACTO MOBILE--------------------*/
+    .formulario{
+        &__campos{
+            font-family: $fuenteParrafo;
+            margin: 5px 0px 5px 0px;
+            width: 300px;
+        }
+    }
+    
+    }
+    

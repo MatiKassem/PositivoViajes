@@ -1,0 +1,52 @@
+/*-----------------------------------EMPRESA----------------------------------------*/
+.titulosEmpresa{
+    padding: 10px;
+    }
+
+#gridEmpresa{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: "historia historia mapa"
+                         "mision mision mapa"    ;
+    grid-gap: 10px;
+}
+#areaHistoria{
+    grid-area: historia;
+    padding: 10px;
+}
+#areaMision{
+    grid-area: mision;
+    padding: 10px;
+}
+#areaMapa{
+    grid-area: mapa;
+    padding: 10px;
+}
+#divEquipoDeTrabajo{
+    display: flex;
+    width: 100vw;
+    padding-left: 40px;
+}
+.divCards{
+    width: 25%;
+    text-align: center;
+    margin: 0;
+}
+
+
+.btn-primary{
+background-color: rgb(186, 179, 248);
+border-color: rgb(186, 179, 248);
+}
+
+#divPartners{
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly
+}
+.imgPartners{
+    width: 160px;
+    height: 90px;
+    padding: 10px;
+}
