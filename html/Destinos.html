@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
   <header>
@@ -23,34 +24,59 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item px-4">
+            <li class="nav-item px-3">
               <a class="nav-link" href="../index.html">Home</a>
             </li>
-            <li class="nav-item px-4">
-              <a class="nav-link  active" aria-current="page" href="./Destinos.html">Destinos</a>
+            <li class="nav-item px-3">
+              <a class="nav-link active" aria-current="page" href="../html/Destinos.html">Destinos</a>
             </li>
-            <li class="nav-item px-4">
-              <a class="nav-link" href="./Tarifarioonline.html">Tarifario</a>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="../html/Tarifarioonline.html">Tarifario</a>
             </li>
-            <li class="nav-item px-4">
-              <a class="nav-link" href="./Empresa.html">Empresa</a>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="../html/Empresa.html">Empresa</a>
             </li>
-            <li class="nav-item px-4">
-              <a class="nav-link" href="./Contacto.html">Contacto</a>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="../html/Contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item px-2">
+              <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            ACCESO A AGENCIAS
+            </button>
             </li>
           </ul>
           </div>
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          ACCESO A AGENCIAS
-          </button>
       </div>
 
   </nav>
   </header>
     <main>
-    <h1 class="tituloDestinos">Somos especialistas en los siguientes destinos</h1>
-    <h2 class="tituloDestinos">Brasil</h2>
+          <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">ACCESO A AGENCIAS</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+         <form>
+         <label for="us">Usuario</label>
+         <input type="text" name="Usuario" id="us" placeholder="Ingrese su usuario">
+         <br>
+         <label for="pass">Contraseña</label>
+         <input type="text" name="Contraseña" id="pass" placeholder="Ingrese su Contraseña">
+         </div>
+         <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ingresar</button>
+         <button type="button" class="btn btn-primary">Cerrar</button>
+         </div>
+        </div>
+       </div>
+   </div>
+    <h1 class="tituloDestinos animate__animated animate__fadeInLeft">Somos especialistas en los siguientes destinos</h1>
+    <h2 class="tituloDestinos animate__animated animate__fadeInLeft">Brasil</h2>
     <div id="divDestinoBrasil">        
         <div id="rio"><h3 class="contenidoDestinos">Rio de Janeiro</h3></div>
         <div id="buzios"><h3 class="contenidoDestinos">Buzios</h3></div>
@@ -65,7 +91,7 @@
         <div id="aquiraz" > <h3 class="contenidoDestinos">Aquiraz</h3></div>
         <div id="jericoacoara" > <h3 class="contenidoDestinos">Jericoacoara</h3></div>
     </div>
-        <h2 class="tituloDestinos">Perú</h2>
+        <h2 class="tituloDestinos animate__animated animate__fadeInLeft">Perú</h2>
         <div id="divDestinoPeru">
         <div id="lima"><h3 class="contenidoDestinos">Lima - Ciudad Imperial</h3></div>
         <div id="organos"><h3 class="contenidoDestinos">Organos - Punta Sal</h3></div>
@@ -74,7 +100,7 @@
         <div id="iquitos"><h3 class="contenidoDestinos">Iquitos - Selva</h3></div>
         <div id="arequipa"><h3 class="contenidoDestinos">Arequipa</h3></div>
     </div>
-        <h2 class="tituloDestinos">México</h2>
+        <h2 class="tituloDestinos animate__animated animate__fadeInLeft">México</h2>
         <div id="divDestinoMexico">
         <div id="cancun"><h3 class="contenidoDestinos">Cancun</h3></div>
         <div id="playaDelCarmen"><h3 class="contenidoDestinos">Playa del Carmen</h3></div>
@@ -83,7 +109,7 @@
         <div id="maravillasDelNorte"><h3 class="contenidoDestinos">Maravillas del Norte</h3></div>
         <div id="bajaCalifornia"><h3 class="contenidoDestinos">Baja California</h3></div>
     </div>
-        <h2 class="tituloDestinos">Estados Unidos</h2>
+        <h2 class="tituloDestinos animate__animated animate__fadeInLeft">Estados Unidos</h2>
     <div id="divDestinoEstadosUnidos">
         <div id="sanFrancisco"><h3 class="contenidoDestinos">San Francisco</h3></div>
         <div id="newYork"><h3 class="contenidoDestinos">New York</h3></div>
@@ -96,17 +122,17 @@
     </main>
     <footer>
       <div class="footer footer--gradient">
-          <ul class="footer__iconos">
-              <li><i class="fab fa-cc-visa"></i></li>
-              <li><i class="fab fa-cc-amex"></i></li>
-              <li><i class="fab fa-cc-paypal"></i></li>
+          <ul class="footer__lista">
+              <li><a href="#"><img class="footer__iconos" src="../Imagenes/Iconos/logoPaypal.png" alt="logPaypal"></a></li>
+              <li><a href="#"><img class="footer__iconos" src="../Imagenes/Iconos/logoMaster.png" alt="logMaster"></a></li>
+              <li><a href="#"><img class="footer__iconos" src="../Imagenes/Iconos/logoVisa.svg" alt="logVisa"></a></li>
           </ul>
           <p class="footer__texto">Sitio Web para Profesionales en Turismo. Positivo Viajes de Guguito S.R.L todos los derechos reservados</p>
-          <ul class="footer__iconos">
-              <li><i class="fab fa-whatsapp-square"></i></li>
-              <li><i class="fab fa-twitter-square"></i></li>
-              <li><i class="fab fa-skype"></i></li>
-              <li><i class="fab fa-youtube"></i></li>
+          <ul class="footer__lista">
+              <li><a href="https://api.whatsapp.com/send/?phone=5491136215836&text&app_absent=0"><img class="footer__iconos" src="../Imagenes/Iconos/logoWsap.png" alt="logoWsap"></a></li>
+              <li><a href="https://www.instagram.com/positivo.viajes/?hl=es-la"><img class="footer__iconos" src="../Imagenes/Iconos/logoInstagram.jpg" alt="logoInsta"></a></li>
+              <li><a href="https://twitter.com/positivoviajes"><img class="footer__iconos" src="../Imagenes/Iconos/logoTwitter.png" alt="logoTwitter"></a></li>
+              <li><a href="https://www.youtube.com/channel/UC3CcWL1uZp_GPqkOC_422vg"><img class="footer__iconos" src="../Imagenes/Iconos/logoYoutube.png" alt="logoYoutube"></a></li>
           </ul>
       </div>
   </footer>

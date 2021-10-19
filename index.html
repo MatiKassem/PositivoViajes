@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
 <body>
     <header>
@@ -23,27 +24,29 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item px-4">
+              <li class="nav-item px-3">
                 <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
               </li>
-              <li class="nav-item px-4">
+              <li class="nav-item px-3">
                 <a class="nav-link" href="html/Destinos.html">Destinos</a>
               </li>
-              <li class="nav-item px-4">
+              <li class="nav-item px-3">
                 <a class="nav-link" href="html/Tarifarioonline.html">Tarifario</a>
               </li>
-              <li class="nav-item px-4">
+              <li class="nav-item px-3">
                 <a class="nav-link" href="html/Empresa.html">Empresa</a>
               </li>
-              <li class="nav-item px-4">
+              <li class="nav-item px-3">
                 <a class="nav-link" href="html/Contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item px-2">
+                <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              ACCESO A AGENCIAS
+              </button>
               </li>
             </ul>
             </div>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            ACCESO A AGENCIAS
-            </button>
         </div>
   
     </nav>
@@ -73,8 +76,8 @@
         </div>
     </div>
     <div class="mainGrid">
-    <h1 class="tituloPrincipalIndex">Somos Positivo. Somos Especialistas. Descubri las maravillas de Brasil, Perú, México y EEUU</h1>
-    <h2 id="viaja">Viaja Flexible</h2>
+    <h1 class="tituloPrincipalIndex animate__animated animate__backInLeft">Somos Positivo. Somos Especialistas. Descubri las maravillas de Brasil, Perú, México y EEUU</h1>
+    <h2 id="viaja" class="animate__animated animate__backInLeft">Viaja Flexible</h2>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -128,17 +131,17 @@
     </main>
     <footer>
         <div class="footer footer--gradient">
-            <ul class="footer__iconos">
-                <li class="footer__iconos"><i class="fab fa-cc-visa"></i></li>
-                <li class="footer__iconos"><i class="fab fa-cc-amex"></i></li>
-                <li class="footer__iconos"><i class="fab fa-cc-paypal"></i></li>
+            <ul class="footer__lista">
+                <li><a href="#"><img class="footer__iconos" src="./Imagenes/Iconos/logoPaypal.png" alt="logPaypal"></a></li>
+                <li><a href="#"><img class="footer__iconos" src="./Imagenes/Iconos/logoMaster.png" alt="logMaster"></a></li>
+                <li><a href="#"><img class="footer__iconos" src="./Imagenes/Iconos/logoVisa.svg" alt="logVisa"></a></li>
             </ul>
             <p class="footer__texto">Sitio Web para Profesionales en Turismo. Positivo Viajes de Guguito S.R.L todos los derechos reservados</p>
-            <ul class="footer__iconos">
-                <li class="footer__iconos"><i class="fab fa-whatsapp-square"></i></li>
-                <li class="footer__iconos"><i class="fab fa-twitter-square"></i></li>
-                <li class="footer__iconos"><i class="fab fa-skype"></i></li>
-                <li class="footer__iconos"><i class="fab fa-youtube"></i></li>
+            <ul class="footer__lista">
+                <li><a href="https://api.whatsapp.com/send/?phone=5491136215836&text&app_absent=0"><img class="footer__iconos" src="./Imagenes/Iconos/logoWsap.png" alt="logoWsap"></a></li>
+                <li><a href="https://www.instagram.com/positivo.viajes/?hl=es-la"><img class="footer__iconos" src="./Imagenes/Iconos/logoInstagram.jpg" alt="logoInsta"></a></li>
+                <li><a href="https://twitter.com/positivoviajes"><img class="footer__iconos" src="./Imagenes/Iconos/logoTwitter.png" alt="logoTwitter"></a></li>
+                <li><a href="https://www.youtube.com/channel/UC3CcWL1uZp_GPqkOC_422vg"><img class="footer__iconos" src="./Imagenes/Iconos/logoYoutube.png" alt="logoYoutube"></a></li>
             </ul>
         </div>
     </footer>

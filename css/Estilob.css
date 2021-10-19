@@ -28,11 +28,12 @@ nav {
   box-shadow: 0 -5px 20px black; }
 
 .collapse.navbar-collapse {
-  justify-content: space-evenly; }
+  justify-content: flex-end; }
 
 .imgLogo {
-  height: 60%;
-  width: 60%; }
+  height: 60px;
+  width: 160px;
+  margin-left: 10%; }
 
 main {
   height: auto;
@@ -50,7 +51,7 @@ main {
   right: 0; }
 
 .mainGrid {
-  background-image: url(../Imagenes/Fondos/fondoRioDeJaneiro.jpg);
+  background-image: url(../Imagenes/Fondos/fondoPlaya.jpg);
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -58,8 +59,8 @@ main {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1.5fr 1.5fr;
-  grid-template-areas: "titulo titulo ." "viaja . ." "carousel carousel carousel" "carousel carousel carousel";
+  grid-template-rows: 1fr 1fr 1fr 1.5fr;
+  grid-template-areas: "titulo titulo ." ". . ." "viaja . ." "carousel carousel carousel";
   justify-items: center;
   align-items: center;
   row-gap: 5px;
@@ -107,36 +108,44 @@ main {
   height: 100px;
   width: 100px;
   position: fixed;
-  bottom: 0%;
+  bottom: 15%;
   right: 0%; }
 
 .footer {
   display: flex;
   height: 80px;
   width: 100vw;
-  justify-content: space-between;
-  box-shadow: 0 1px 15px black; }
+  box-shadow: 0 1px 15px black;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  padding-bottom: 10px; }
   .footer--color {
     background-color: rgba(109, 55, 160, 0.678); }
   .footer--gradient {
     background-image: linear-gradient(#a197fa, #b8b1f8, #cac0f5); }
+  .footer__lista {
+    display: flex;
+    list-style: none;
+    padding: 0%;
+    margin: 0%; }
   .footer__iconos {
     display: flex;
     list-style: none;
-    justify-content: space-evenly;
-    font-size: 30px;
-    width: 20%;
-    margin-right: 1.5rem;
-    padding-top: 1rem;
-    font-weight: 400; }
+    height: 60px;
+    width: 60px;
+    margin-left: 20px;
+    margin-right: 20px; }
   .footer__texto {
     padding: 10px;
     font-size: 100%;
     font-weight: 400;
     text-align: center;
-    margin-top: 10px; }
+    margin: 0%; }
 
 /*----------------------------------------DESTINOS------------------------------------------------------*/
+.tituloDestinos {
+  font-size: 200%; }
+
 .contenidoDestinos {
   font-size: 120%;
   background-color: rgba(255, 255, 255, 0.4);
@@ -378,7 +387,7 @@ main {
   background-size: cover;
   justify-self: center;
   align-self: center;
-  background-image: url(../Imagenes/DestinoMexico/PlayadelCarmen.jpg);
+  background-image: url(../Imagenes/DestinoMexico/playaDelCarmen.jpg);
   grid-area: playaDelCarmen; }
 
 #merida {
@@ -540,7 +549,7 @@ main {
     font-style: italic;
     font-family: "Roboto", sans-serif; }
 
-/*-----------------------------------------EMPRESA---------------------------------------------------------------------*/
+/*-----------------------------------EMPRESA----------------------------------------*/
 .titulosEmpresa {
   padding: 10px; }
 
@@ -565,10 +574,13 @@ main {
 
 #divEquipoDeTrabajo {
   display: flex;
-  width: 100vw; }
+  width: 100vw;
+  padding-left: 40px; }
 
 .divCards {
-  width: 25%; }
+  width: 25%;
+  text-align: center;
+  margin: 0; }
 
 .btn-primary {
   background-color: #bab3f8;
@@ -590,12 +602,21 @@ main {
   font-size: 180%;
   padding: 1rem;
   margin-bottom: 0px;
-  background-color: black;
-  opacity: 0.8;
-  color: white; }
+  color: white;
+  position: relative; }
+
+#divContacto:before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  opacity: 0.4;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 #divContacto {
-  background-image: url(../Imagenes/Logos/contactenos.PNG);
+  background-image: url(../Imagenes/Fondos/fondoPrincipal.jpg);
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -605,8 +626,7 @@ main {
 .formulario {
   color: white;
   padding: 20px;
-  background-color: black;
-  opacity: 0.8; }
+  position: relative; }
   .formulario__titulo {
     font-family: "Roboto", sans-serif;
     font-size: 120%;
@@ -623,11 +643,23 @@ main {
 
 /*---------------------------TABLET-------------------------------------------------------------------*/
 @media only screen and (max-width: 975px) {
-  /*-------------FOOTER TABLET-------------------*/
-  .footer__iconos {
-    font-size: 20px; }
-  .footer__texto {
-    font-size: 80%; }
+  /*---------------------FOOTER TABLET--------------------*/
+  .footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto; }
+    .footer__iconos {
+      height: 20px;
+      width: 20px;
+      margin-left: 10px;
+      margin-right: 10px; }
+    .footer__texto {
+      padding: 0px;
+      font-size: 70%;
+      font-weight: 400;
+      text-align: center;
+      margin: 0%; }
+  /*-------------INDEX TABLET-------------------*/
   #viaja {
     font-size: 160%; }
   .tituloPrincipalIndex {
@@ -649,6 +681,9 @@ main {
   #imgCarousel {
     height: 300px;
     width: 90vw; }
+  /*-------------DESTINOS TABLET-------------------*/
+  .tituloDestinos {
+    font-size: 150%; }
   #divDestinoBrasil {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -665,6 +700,7 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "sanFrancisco newYork miami" "lasVegas boston orlando"; }
+  /*-------------TARIFARIOS TABLET-------------------*/
   .tarifario {
     display: inline-block;
     margin: 10px 0px;
@@ -688,7 +724,7 @@ main {
       list-style: circle;
       margin-left: 10px;
       font-family: "Open Sans", sans-serif; }
-  /*---------------------EMPRESA TABLE--------------------*/
+  /*---------------------EMPRESA TABLET--------------------*/
   #gridEmpresa {
     display: grid;
     grid-template-columns: 1fr;
@@ -742,15 +778,27 @@ main {
   #partnerCinco {
     grid-area: partnerCinco; }
   #partnerSeis {
-    grid-area: partnerSeis; } }
+    grid-area: partnerSeis; }
+  /*---------------------CONTACTO TABLET--------------------*/ }
 
 /*--------------------------SMARTPHONE----------------------------------*/
 @media only screen and (max-width: 396px) {
   /*---------------------FOOTER MOBILE--------------------*/
-  .footer__iconos {
-    font-size: 20px; }
-  .footer__texto {
-    font-size: 60%; }
+  .footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto; }
+    .footer__iconos {
+      height: 20px;
+      width: 20px;
+      margin-left: 10px;
+      margin-right: 10px; }
+    .footer__texto {
+      padding: 0px;
+      font-size: 40%;
+      font-weight: 400;
+      text-align: center;
+      margin: 0%; }
   /*---------------------INDEX MOBILE--------------------*/
   .mainGrid {
     grid-template-columns: 1fr;
@@ -763,7 +811,15 @@ main {
   #imgCarousel {
     height: 200px;
     width: 90vw; }
+  .logoChat {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 10%;
+    right: 0%; }
   /*---------------------DESTINOS MOBILE--------------------*/
+  .tituloDestinos {
+    font-size: 100%; }
   #divDestinoBrasil {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
